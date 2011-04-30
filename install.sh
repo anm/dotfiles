@@ -5,6 +5,10 @@ if ! [ -e replaced ]; then
 fi
 
 for FILE in .[a-zA-Z_]*; do
+    if [ $FILE == ".git" ]; then
+        continue
+    fi
+
     echo $FILE
 
     if [ -h ~/$FILE ]; then
