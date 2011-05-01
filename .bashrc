@@ -51,7 +51,7 @@ PROMPT_COMMAND=exitstatus
 PS1="$?\u@\h \w$ "; export PS1
 PATH="/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:~/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin"; export PATH
 
-export PERL5LIB="$HOME/lib/perl5"
+export PERL5LIB="/opt/local/lib/perl5/site_perl/5.12.3:$HOME/lib/perl5:$PERL5LIB"
 export PERL_MM_USE_DEFALT=1
 
 CLASSPATH=".:$HOME/bin/java/*:$HOME/lib/java/*:/usr/share/java:/usr/share/java/*:/usr/lib/junit.jar:/usr/local/lib/libthrift.jar:/usr/share/java/slf4j/slf4j-api.jar:/usr/share/java/slf4j/slf4j-log4j12.jar:/usr/share/java/log4j.jar"; export CLASSPATH

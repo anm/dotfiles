@@ -6,7 +6,7 @@ use warnings;
 my $HOME = File::HomeDir->my_home;
 my $CPAN_HOME = "$HOME/.cpan_home";
 
-my $URL_LIST = q[file:///var/local/cpanmini];
+my $URL_LIST = [q[file:///var/local/cpanmini]];
 #  'urllist' => [q[ftp://ftp.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/], q[ftp://ftp.plig.net/pub/CPAN/], q[ftp://mirror.ox.ac.uk/sites/www.cpan.org/], q[ftp://ftp.demon.co.uk/pub/CPAN/]],
 
 print "Hello!\n\n\n";
@@ -61,7 +61,7 @@ $CPAN::Config = {
   'perl5lib_verbosity' => q[v],
   'prefer_installer' => q[MB],
   'prefs_dir' => q[$CPAN_HOME/prefs],
-  'prerequisites_policy' => q[ask],
+  'prerequisites_policy' => q[follow],
   'scan_cache' => q[atstart],
   'shell' => q[/bin/bash],
   'show_unparsable_versions' => q[0],
