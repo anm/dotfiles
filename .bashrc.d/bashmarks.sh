@@ -1,1 +1,1 @@
-../bashmarks/bashmarks.sh
+bashmarks/bashmarks.sh
