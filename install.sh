@@ -20,5 +20,5 @@ for FILE in .[a-zA-Z_]*; do
         mv ~/$FILE replaced/
     fi
 
-    ln -s dotfiles/$FILE ~/$FILE
+    ln -s personal/Dropbox/dotfiles/$FILE ~/$FILE
 done
