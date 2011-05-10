@@ -8,6 +8,7 @@
 (global-font-lock-mode t)
 (menu-bar-mode 0)
 (column-number-mode 1)
+(set-default 'fill-column 78)
 
 ; for browsing / editing archives
 (auto-compression-mode 1)
@@ -29,11 +30,10 @@
         (untabify (1- (point)) (point-max))))
   nil)
 
-(add-hook 'java-mode-hook 
+(add-hook 'java-mode-hook
           '(lambda ()
              (make-local-variable 'write-contents-hooks)
              (add-hook 'write-contents-hooks 'java-mode-untabify)))
-
 
 ;;; Keys
 (global-set-key "\C-w" 'backward-kill-word)
@@ -48,6 +48,11 @@
 (add-to-list 'load-path package-path)
 
 (require 'smooth-scrolling)
+(require 'redspace-mode)
+(add-hook 'java-mode-hook
+          redspace-mode)
+(add-hook 'text-mode-hook
+          redspace-mode)
 
 (add-to-list 'load-path (concat package-path "/twittering-mode"))
 (require 'twittering-mode)
@@ -65,10 +70,16 @@
 ;(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
 ;(autoload 'haskell-mode "haskell-mode" nil t)
+
+;;; Java
+(defun set-fill-java ()
+  (set-default 'fill-column 132))
+
+(add-hook 'java-mode-hook 'set-fill-java)
 
 ;;; Utils
 (defun filter-existing-files (file-names)
