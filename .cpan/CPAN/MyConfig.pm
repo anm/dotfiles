@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-#use File::HomeDir;
+use File::HomeDir;
 
 my $HOME = File::HomeDir->my_home;
 my $CPAN_HOME = "$HOME/.cpan_home";
@@ -27,7 +27,7 @@ $CPAN::Config = {
   'commandnumber_in_prompt' => q[1],
   'connect_to_internet_ok' => q[1],
   'cpan_home' => "$CPAN_HOME/.cpan",
-  'curl' => q[/usr/bin/curl],
+  'curl' => q[/bin/curl],
   'ftp' => q[/usr/bin/ftp],
   'ftp_passive' => q[1],
   'ftp_proxy' => q[],
@@ -60,7 +60,7 @@ $CPAN::Config = {
   'patch' => q[/usr/bin/patch],
   'perl5lib_verbosity' => q[v],
   'prefer_installer' => q[MB],
-  'prefs_dir' => q[$CPAN_HOME/prefs],
+  'prefs_dir' => qq[$CPAN_HOME/prefs],
   'prerequisites_policy' => q[follow],
   'scan_cache' => q[atstart],
   'shell' => q[/bin/bash],
