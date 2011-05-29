@@ -4,3 +4,6 @@
 [submodule ".emacs.d/packages/twittering-mode"]
 	path = .emacs.d/packages/twittering-mode
 	url = git://github.com/hayamiz/twittering-mode.git
+[submodule "solarized"]
+	path = solarized
+	url = https://github.com/altercation/solarized.git
