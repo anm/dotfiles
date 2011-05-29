@@ -49,7 +49,7 @@ function exitstatus {
 PROMPT_COMMAND=exitstatus
 
 PS1="$?\u@\h \w$ "; export PS1
-PATH=".:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:~/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin"; export PATH
+PATH="/opt/local//Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql90/bin:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:~/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin"; export PATH
 
 export PERL5LIB="/opt/local/lib/perl5/site_perl/5.12.3:$HOME/lib/perl5:$PERL5LIB"
 export PERL_MM_USE_DEFALT=1
