@@ -1,0 +1,5 @@
+My configuration files.
+
+I check this repo out on a machine I want to use then run install.sh.
+This script creates symlinks from ~ to the dotfiles here.
+Existing files are backed up to the replaced directory.
