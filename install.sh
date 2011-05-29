@@ -1,5 +1,9 @@
 #!/bin/bash
 
+DOTFILE_DIR="$( cd "$( dirname "$0" )" && pwd )"
+
+cd $DOTFILE_DIR
+
 if ! [ -e replaced ]; then
     mkdir replaced
 fi
@@ -20,5 +24,5 @@ for FILE in .[a-zA-Z_]*; do
         mv ~/$FILE replaced/
     fi
 
-    ln -s personal/Dropbox/dotfiles/$FILE ~/$FILE
+    ln -s $DOTFILE_DIR/$FILE ~/$FILE
 done
