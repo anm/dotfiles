@@ -26,7 +26,7 @@
         meta = yellow bold
         frag = magenta bold
         old = red bold
-        new = green bold
+        new = green
 
 [color "status"]
         added = yellow
