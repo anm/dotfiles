@@ -81,6 +81,11 @@
 
 (add-hook 'java-mode-hook 'set-fill-java)
 
+;;; Groovy
+
+(autoload 'groovy-mode "groovy-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
+
 ;;; Utils
 (defun filter-existing-files (file-names)
   "Takes a list of file names. Returns a list containing the file
