@@ -12,6 +12,8 @@ if [ uname == "Linux" ]; then
     LINUX=1
 fi
 
+source "$HOME/.bashrc.d/git-completion.bash"
+
 function exitstatus {
     EXITSTATUS="$?"
     BOLD="\[\033[1m\]"
@@ -20,9 +22,9 @@ function exitstatus {
     
     if [ "$EXITSTATUS" -eq "0" ]
     then
-        PS1="$EXITSTATUS\u@\h:\w\$ "
+        PS1="$EXITSTATUS\u@\h:\w$(__git_ps1 " (%s)")\$ "
     else
-        PS1="${RED}$EXITSTATUS${OFF}\u@\h:\w${OFF}${RED}\$${OFF} "
+        PS1="${RED}$EXITSTATUS${OFF}\u@\h:\w${OFF}$(__git_ps1 " (%s)")${RED}\$${OFF} "
     fi
     
     PS2="${BOLD}>${OFF} "
