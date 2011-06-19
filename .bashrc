@@ -49,6 +49,7 @@ CLASSPATH=".:$HOME/bin/java/*:$HOME/lib/java/*:/usr/share/java:/usr/share/java/*
 EDITOR="emacs -nw"; export EDITOR
 VISUAL="emacs -nw"; export VISUAL
 PAGER=less; export PAGER
+LESS="-iR"; export LESS # case insesitive searching, raw colour contol chars
 MAIL=~/Maildir; export MAIL
 MAILDIR=~/Maildir; export MAILDIR
 EMAIL="alistair@biscuitsfruit.org.uk"; export EMAIL
