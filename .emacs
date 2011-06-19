@@ -67,13 +67,13 @@
 ;(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
 
 ;;; Haskell
-;(load "/usr/share/emacs/site-lisp/haskell-mode/haskell-site-file")
+(load "~/.emacs.d/packages/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 ;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
-;(autoload 'haskell-mode "haskell-mode" nil t)
+(autoload 'haskell-mode "haskell-mode" nil t)
 
 ;;; Java
 (defun set-fill-java ()
