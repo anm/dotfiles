@@ -1,5 +1,5 @@
 [submodule "bashmarks"]
-	path = bashmarks
+	path = .bashrc.d/bashmarks
 	url = https://github.com/huyng/bashmarks.git
 [submodule ".emacs.d/packages/twittering-mode"]
 	path = .emacs.d/packages/twittering-mode
@@ -7,3 +7,6 @@
 [submodule "solarized"]
 	path = solarized
 	url = https://github.com/altercation/solarized.git
+[submodule ".emacs.d/packages/groovy"]
+	path = .emacs.d/packages/groovy
+	url = git://github.com/timvisher/emacs-groovy-mode-mirror.git

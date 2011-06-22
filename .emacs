@@ -82,7 +82,7 @@
 (add-hook 'java-mode-hook 'set-fill-java)
 
 ;;; Groovy
-
+(add-to-list 'load-path (concat package-path "/groovy"))
 (autoload 'groovy-mode "groovy-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
 
