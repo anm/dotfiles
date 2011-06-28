@@ -10,3 +10,6 @@
 [submodule ".emacs.d/packages/groovy"]
 	path = .emacs.d/packages/groovy
 	url = git://github.com/timvisher/emacs-groovy-mode-mirror.git
+[submodule ".emacs.d/packages/haml"]
+	path = .emacs.d/packages/haml
+	url = git://github.com/nex3/haml-mode.git

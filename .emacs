@@ -86,6 +86,10 @@
 (autoload 'groovy-mode "groovy-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
 
+;;; Haml
+(add-to-list 'load-path (concat package-path "/haml"))
+(require 'haml-mode)
+
 ;;; Utils
 (defun filter-existing-files (file-names)
   "Takes a list of file names. Returns a list containing the file
