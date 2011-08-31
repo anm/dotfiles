@@ -4,6 +4,8 @@ DOTFILE_DIR="$( cd "$( dirname "$0" )" && pwd )"
 
 cd $DOTFILE_DIR
 
+git submodule update --init
+
 if ! [ -e replaced ]; then
     mkdir replaced
 fi
