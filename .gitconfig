@@ -4,7 +4,7 @@
         signingkey = 07577A4A
 
 [core]
-        whitespace=fix,tab-in-indent,
+        whitespace=tab-in-indent
 [alias]
         ci = commit
         co = checkout
