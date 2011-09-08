@@ -71,8 +71,9 @@
 (load "~/.emacs.d/packages/haskell-mode/haskell-site-file")
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
+
+; Broke on multi-line strings (with backslashes at start and end of each line)
+(setq max-lisp-eval-depth 1200)
 
 (autoload 'haskell-mode "haskell-mode" nil t)
 
