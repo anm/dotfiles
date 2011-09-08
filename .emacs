@@ -20,7 +20,7 @@
 
 ; From http://www.jwz.org/doc/tabs-vs-spaces.html
 ; Automatically removes tab characters from file on save
-(defun java-mode-untabify ()
+(defun untabify-on-save ()
   (save-excursion
     (goto-char (point-min))
     (while (re-search-forward "[ \t]+$" nil t)
@@ -30,10 +30,12 @@
         (untabify (1- (point)) (point-max))))
   nil)
 
-(add-hook 'java-mode-hook
-          '(lambda ()
-             (make-local-variable 'write-contents-hooks)
-             (add-hook 'write-contents-hooks 'java-mode-untabify)))
+(defun untabify-hook-function ()
+  (make-local-variable 'write-contents-hooks)
+  (add-hook 'write-contents-hooks 'java-mode-untabify))
+
+(add-hook 'java-mode-hook 'untabify-hook-function)
+;(add-hook 'groovy-mode-hook 'untabify-hook-function)
 
 ;;; Keys
 (global-set-key "\C-w" 'backward-kill-word)
