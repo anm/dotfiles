@@ -42,6 +42,7 @@
 
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 (global-set-key "\C-c\C-m" 'execute-extended-command)
+(global-set-key (kbd "C-c f") 'indent-region)
 
 ;;; Packages
 (setq package-path "~/.emacs.d/packages")
@@ -77,7 +78,7 @@
 
 ;;; Java
 (defun set-fill-java ()
-  (set-default 'fill-column 132))
+  (set-default 'fill-column 128))
 
 (add-hook 'java-mode-hook 'set-fill-java)
 
@@ -152,6 +153,7 @@ names which correspond to an existant file."
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(haml-indent-offset 4)
  '(js2-cleanup-whitespace t)
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
