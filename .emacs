@@ -147,7 +147,8 @@ names which correspond to an existant file."
   "Command to kill a compilation launched by `mode-compile'" t)
 (global-set-key "\C-ck" 'mode-compile-kill)
 
-
+;;; Ruby
+(add-to-list 'auto-mode-alist (cons "Vagrantfile" 'ruby-mode))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
