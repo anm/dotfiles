@@ -150,6 +150,7 @@ names which correspond to an existant file."
 ;;; Ruby
 (add-to-list 'auto-mode-alist (cons "Rakefile" 'ruby-mode))
 (add-to-list 'auto-mode-alist (cons "Vagrantfile" 'ruby-mode))
+(add-to-list 'auto-mode-alist (cons "\\.rake\\'" 'ruby-mode))
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
