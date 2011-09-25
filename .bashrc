@@ -56,6 +56,9 @@ MAILDIR=~/Maildir; export MAILDIR
 EMAIL="alistair@biscuitsfruit.org.uk"; export EMAIL
 PRINTER="Canon_MX7600_series"; export PRINTER
 
+# Load rvm (Ruby enVironment Manager)
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 # ls
 if [ "$TERM" != "dumb" ]; then
     if $LINUX; then
