@@ -148,6 +148,7 @@ names which correspond to an existant file."
 (global-set-key "\C-ck" 'mode-compile-kill)
 
 ;;; Ruby
+(add-to-list 'auto-mode-alist (cons "Rakefile" 'ruby-mode))
 (add-to-list 'auto-mode-alist (cons "Vagrantfile" 'ruby-mode))
 
 (custom-set-variables
