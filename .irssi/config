@@ -290,7 +290,7 @@ statusbar = {
 
 settings = {
   core = {
-      real_name = "anm";
+      real_name = "Alistair MacLeod";
       user_name = "anm";
       nick = "anm";
   };
