@@ -12,6 +12,10 @@ if [ uname == "Linux" ]; then
     LINUX=1
 fi
 
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
 source "$HOME/.bashrc.d/git-completion.bash"
 
 function exitstatus {
