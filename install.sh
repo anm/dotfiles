@@ -15,6 +15,10 @@ for FILE in .[a-zA-Z_]*; do
         continue
     fi
 
+    if [ $FILE == ".gitmodules" ]; then
+        continue
+    fi
+
     echo $FILE
 
     if [ -h ~/$FILE ]; then
