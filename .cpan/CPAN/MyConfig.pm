@@ -1,13 +1,20 @@
 use strict;
 use warnings;
 
-use File::HomeDir;
+#use File::HomeDir;
 
-my $HOME = File::HomeDir->my_home;
+#my $HOME = File::HomeDir->my_home;
+
+my $HOME = "/home/anm";
 my $CPAN_HOME = "$HOME/.cpan_home";
+my $USE_CPAN_MINI = 0;
 
-my $URL_LIST = [q[file:///var/local/cpanmini]];
-#  'urllist' => [q[ftp://ftp.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/], q[ftp://ftp.plig.net/pub/CPAN/], q[ftp://mirror.ox.ac.uk/sites/www.cpan.org/], q[ftp://ftp.demon.co.uk/pub/CPAN/]],
+my $URL_LIST = $USE_CPAN_MINI ?
+    [q[file:///var/local/cpanmini]] :
+    [q[ftp://ftp.mirrorservice.org/sites/ftp.funet.fi/pub/languages/perl/CPAN/],
+     q[ftp://ftp.plig.net/pub/CPAN/],
+     q[ftp://mirror.ox.ac.uk/sites/www.cpan.org/],
+     q[ftp://ftp.demon.co.uk/pub/CPAN/]];
 
 print "Hello!\n\n\n";
 
