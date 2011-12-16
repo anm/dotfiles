@@ -112,7 +112,6 @@ names which correspond to an existant file."
 (setq inferior-lisp-program (first-file lisps))
 
 ;; Slime
-(add-to-list 'load-path (concat package-path "/slime/"))
 (require 'slime)
 (slime-setup)
 
