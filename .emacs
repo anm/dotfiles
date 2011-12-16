@@ -88,6 +88,11 @@
 (autoload 'groovy-mode "groovy-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.groovy\\'" . groovy-mode))
 
+;;; Clojure
+(add-to-list 'load-path (concat package-path "/clojure"))
+(autoload 'clojure-mode "clojure-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.clj\\'" . clojure-mode))
+
 ;;; Haml
 (add-to-list 'load-path (concat package-path "/haml"))
 (require 'haml-mode)
