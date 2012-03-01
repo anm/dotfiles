@@ -33,4 +33,6 @@
         changed = green
         untracked = cyan
 [push]
-	default = upstream
+#	default = upstream
+# Apparently tracking is deprecated, means the same as upstream.
+        default = tracking
