@@ -1,0 +1,17 @@
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintful
+Xft.rgba: rgb
+XtDefaultBackground: black
+XtDefaultForeground: white
+
+
+# For terminal emulator
+*saveLines: 12000
+
+*foreground: White
+*background: Black
+
+*font: xft:Bitstream Vera Sans Mono:pixelsize=12:antialias=true:hinting=true
+*boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
