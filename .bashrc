@@ -111,4 +111,3 @@ alias m="mpc"
 
 alias gg="links google.com"
 
-source "$HOME/.bashrc.d/bashmarks.sh"
