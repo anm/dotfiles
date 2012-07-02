@@ -162,8 +162,13 @@ names which correspond to an existant file."
 (add-to-list 'auto-mode-alist (cons "Vagrantfile" 'ruby-mode))
 (add-to-list 'auto-mode-alist (cons "\\.rake\\'" 'ruby-mode))
 
-;;; C++ / Arduino
-(add-to-list 'auto-mode-alist '("\\.ino$" . c++-mode))
+;;; Arduino
+(add-to-list 'load-path (concat package-path "/arduino-mode"))
+(autoload 'arduino-mode "arduino-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.pde\\'" . arduino-mode))
+(add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.

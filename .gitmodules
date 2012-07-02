@@ -7,3 +7,6 @@
 [submodule ".emacs.d/packages/haml"]
 	path = .emacs.d/packages/haml
 	url = git://github.com/nex3/haml-mode.git
+[submodule ".emacs.d/packages/arduino-mode"]
+	path = .emacs.d/packages/arduino-mode
+	url = https://github.com/bookest/arduino-mode.git
