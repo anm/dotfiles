@@ -1,4 +1,3 @@
-
 ;;;### (autoloads (ghc-core-mode ghc-core-create-core) "ghc-core"
 ;;;;;;  "ghc-core.el" (19501 55706))
 ;;; Generated autoloads from ghc-core.el

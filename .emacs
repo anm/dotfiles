@@ -2,7 +2,7 @@
 ;;;;; anm@mm0hai.net          ;;;;;;
 ;;;;; github.com/anm/dotfiles ;;;;;;
 
-;;; General
+;;;; General
 (setq inhibit-startup-screen t)
 (setq font-lock-maximum-decoration t)
 (global-font-lock-mode t)
@@ -17,6 +17,16 @@
 (setq-default indent-tabs-mode nil) ; Use spaces for indentation
 (setq tab-width 4) ; Indentation width, whether using tabs or spaces
 (setq-default c-basic-offset 4) ; Indentation width used by c-mode derived modes
+
+;; Keys
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-c\C-k" 'kill-region)
+
+(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key "\C-c\C-m" 'execute-extended-command)
+(global-set-key (kbd "C-c f") 'indent-region)
+
 
 ; From http://www.jwz.org/doc/tabs-vs-spaces.html
 ; Automatically removes tab characters from file on save
@@ -35,16 +45,7 @@
              (make-local-variable 'write-contents-hooks)
              (add-hook 'write-contents-hooks 'java-mode-untabify)))
 
-;;; Keys
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
-(global-set-key "\C-c\C-k" 'kill-region)
-
-(global-set-key "\C-x\C-m" 'execute-extended-command)
-(global-set-key "\C-c\C-m" 'execute-extended-command)
-(global-set-key (kbd "C-c f") 'indent-region)
-
-;;; Packages
+;;;; Packages
 (setq package-path "~/.emacs.d/packages")
 (add-to-list 'load-path package-path)
 
@@ -67,6 +68,27 @@
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+
+;; mode-compile
+(autoload 'mode-compile "mode-compile"
+  "Command to compile current buffer file based on the major mode" t)
+    (global-set-key "\C-cc" 'mode-compile)
+(autoload 'mode-compile-kill "mode-compile"
+  "Command to kill a compilation launched by `mode-compile'" t)
+(global-set-key "\C-ck" 'mode-compile-kill)
+
+;;;; Utils
+(defun filter-existing-files (file-names)
+  "Takes a list of file names. Returns a list containing the file
+names which correspond to an existant file."
+  (let (existing '())
+    (mapc '(lambda (f)
+             (if (file-exists-p f) (add-to-list 'existing f)))
+          file-names)
+    existing))
+
+(defun first-file (file-names)
+  (car (filter-existing-files file-names)))
 
 ;;;; Language Specific Modes
 
@@ -103,19 +125,6 @@
 (add-to-list 'load-path (concat package-path "/haml"))
 (require 'haml-mode)
 
-;;; Utils
-(defun filter-existing-files (file-names)
-  "Takes a list of file names. Returns a list containing the file
-names which correspond to an existant file."
-  (let (existing '())
-    (mapc '(lambda (f)
-             (if (file-exists-p f) (add-to-list 'existing f)))
-          file-names)
-    existing))
-
-(defun first-file (file-names)
-  (car (filter-existing-files file-names)))
-
 ;;; Lisp
 (setq lisps '("/usr/bin/sbcl"
               "/opt/local/bin/sbcl"))
@@ -148,14 +157,6 @@ names which correspond to an existant file."
 ;(add-to-list 'load-path "~/.emacs.d/ultratex/lisp")
 ;(require 'light)
 ;(require 'ultex-setup)
-
-;;mode-compile
-(autoload 'mode-compile "mode-compile"
-  "Command to compile current buffer file based on the major mode" t)
-    (global-set-key "\C-cc" 'mode-compile)
-(autoload 'mode-compile-kill "mode-compile"
-  "Command to kill a compilation launched by `mode-compile'" t)
-(global-set-key "\C-ck" 'mode-compile-kill)
 
 ;;; Ruby
 (add-to-list 'auto-mode-alist (cons "Rakefile" 'ruby-mode))
