@@ -37,7 +37,7 @@ function exitstatus {
 PROMPT_COMMAND=exitstatus
 
 PS1="$?\u@\h \w\$(git_branch)$ "; export PS1
-PATH="/opt/local//Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql90/bin:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:~/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin:/Applications/Android-SDK/tools"; export PATH
+PATH="/usr/lib/mutt:/opt/local//Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql90/bin:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:~/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin:/Applications/Android-SDK/tools"; export PATH
 
 export JBOSS_HOME="/Users/kung/jboss/jboss-6.0.0.Final"
 export MAVEN_OPTS="-Xmx1024m -Xms512m -XX:MaxPermSize=256m"
