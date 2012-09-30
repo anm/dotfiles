@@ -17,6 +17,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 source "$HOME/.bashrc.d/git-completion.bash"
+source "$HOME/.bashrc.d/private.bash"
 
 function exitstatus {
     EXITSTATUS="$?"
