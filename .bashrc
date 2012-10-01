@@ -4,11 +4,11 @@ export HISTCONTROL=ignoreboth
 # Make sure bash notices window resizing
 shopt -s checkwinsize
 
-if [ uname == "Darwin" ]; then
+if [ `uname` = "Darwin" ]; then
     MAC=1
 fi
 
-if [ uname == "Linux" ]; then
+if [ `uname` = "Linux" ]; then
     LINUX=1
 fi
 
@@ -66,13 +66,13 @@ PRINTER="Canon_MX7600_series"; export PRINTER
 
 # ls
 if [ "$TERM" != "dumb" ]; then
-    if $LINUX; then
-        if [ -x /bin/dircolors ]; then
-            eval "`dircolors -b`"
+    if [ -n "$LINUX" ]; then
+        if [ -x /bin/dircolors ] || [ -x /usr/bin/dircolors ]; then
+            test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
             alias ls='ls --color=auto'
         fi
     fi
-    if $MAC; then
+    if [ -n "$MAC" ]; then
         alias ls="ls -FG"
     fi
 
