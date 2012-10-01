@@ -111,5 +111,3 @@ alias err="tail -n30 -f /var/log/httpd/error_log"
 alias m="mpc"
 
 alias gg="links google.com"
-
-source "$HOME/.aws"
