@@ -132,10 +132,6 @@ names which correspond to an existant file."
 
 (setq inferior-lisp-program (first-file lisps))
 
-;; Slime
-(require 'slime)
-(slime-setup)
-
 ;;; Perl
 ; Run perl region - from Perl Hacks book
 (defun perl-eval (beg end)
