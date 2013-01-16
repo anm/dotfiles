@@ -1,1 +1,2 @@
 application/pdf; evince %s
+image/*; eog %s; test=test -n "$DISPLAY"
