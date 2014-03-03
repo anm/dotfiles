@@ -9,13 +9,7 @@ export LC_COLLATE="en_GB.UTF-8"
 # Make sure bash notices window resizing
 shopt -s checkwinsize
 
-if [ `uname` = "Darwin" ]; then
-    MAC=1
-fi
-
-if [ `uname` = "Linux" ]; then
-    LINUX=1
-fi
+LINUX=1
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -43,10 +37,11 @@ function exitstatus {
 PROMPT_COMMAND=exitstatus
 
 PS1="$?\u@\h \w\$(git_branch)$ "; export PS1
-PATH="/usr/bin:/usr/local/bin:/usr/lib/mutt:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql90/bin:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:~/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin:/Applications/Android-SDK/tools"; export PATH
+PATH="/usr/bin:/usr/local/bin:/usr/lib/mutt:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql90/bin:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:~/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin:/home/anm/bin/adk/sdk/tools"; export PATH
 
 export JBOSS_HOME="/Users/kung/jboss/jboss-6.0.0.Final"
 export MAVEN_OPTS="-Xmx1024m -Xms512m -XX:MaxPermSize=256m"
+export ANDROID_HOME="/home/anm/bin/adk/sdk"
 
 export PGDATA="/var/db/postgresql/defaultdb"
 export PGDATABASE="chronotyper"
@@ -70,7 +65,7 @@ PRINTER="Canon_MX7600_series"; export PRINTER
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Load perlbrew (like rvm for perl)
-#source ~/perl5/perlbrew/etc/bashrc
+source ~/perl5/perlbrew/etc/bashrc
 
 # ls
 if [ "$TERM" != "dumb" ]; then
@@ -106,7 +101,7 @@ alias xterm="xterm -fg white -bg black &"
 alias clean="rm *.aux *.log *.dvi *.toc *.lof *.glo *.gls *.ist *.glg *.nav *.out *.snm *.bbl *.blg pan  pan.b  pan.c  pan.err  pan.h  pan_in  pan_in.trail  pan.m  pan.oin  pan.t  pan.tmp *~ \#*\#; clear; ls"
 alias c="clean"
 
-alias gcc="gcc -ansi -pedantic -Wall -g"
+alias gcc="gcc -std=c99 -pedantic -Wall -g"
 
 alias junit="java org.junit.runner.JUnitCore"
 
