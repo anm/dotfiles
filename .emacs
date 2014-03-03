@@ -150,6 +150,12 @@ names which correspond to an existant file."
 
 (global-set-key "\C-c\C-p" 'perl-eval)
 
+;;; PHP (ugh)
+
+(autoload 'php-mode "php-mode" "Major mode for editing php code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+
 ;;; LaTeX
 ;(add-to-list 'load-path "~/.emacs.d/ultratex/lisp")
 ;(require 'light)
@@ -165,6 +171,21 @@ names which correspond to an existant file."
 (autoload 'arduino-mode "arduino-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.pde\\'" . arduino-mode))
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
+
+;;; Mail
+
+(add-to-list 'auto-mode-alist '(".*mutt.*" . message-mode))
+(setq mail-header-separator "")
+(add-hook 'message-mode-hook 'auto-fill-mode)
+
+
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/Dropbox/bike/")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/org/flagged.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/mobileOrg")
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
