@@ -1,7 +1,7 @@
 [user]
-	name = Alistair MacLeod
-	email = alistair@biscuitsfruit.org.uk
-        signingkey = 07577A4A
+        name = River MacLeod
+        email = river@mm0hai.net
+        signingkey = EADF2038
 
 [core]
         whitespace=tab-in-indent
