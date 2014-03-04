@@ -10,3 +10,6 @@
 [submodule ".emacs.d/packages/arduino-mode"]
 	path = .emacs.d/packages/arduino-mode
 	url = https://github.com/bookest/arduino-mode.git
+[submodule ".emacs.d/packages/cucumber.el"]
+	path = .emacs.d/packages/cucumber.el
+	url = https://github.com/michaelklishin/cucumber.el.git

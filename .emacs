@@ -166,6 +166,11 @@ names which correspond to an existant file."
 (add-to-list 'auto-mode-alist (cons "Vagrantfile" 'ruby-mode))
 (add-to-list 'auto-mode-alist (cons "\\.rake\\'" 'ruby-mode))
 
+(add-to-list 'load-path "~/.emacs.d/packages/cucumber.el")
+
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
 ;;; Arduino
 (add-to-list 'load-path (concat package-path "/arduino-mode"))
 (autoload 'arduino-mode "arduino-mode" nil t)
