@@ -16,7 +16,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 source "$HOME/.bashrc.d/git-completion.bash"
-source "$HOME/.bashrc.d/private.bash"
+
+private="$HOME/.bashrc.d/private.bash"
+if [ -f $private ]; then
+    source $private
+fi
 
 function exitstatus {
     EXITSTATUS="$?"
@@ -65,7 +69,10 @@ PRINTER="Canon_MX7600_series"; export PRINTER
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Load perlbrew (like rvm for perl)
-source ~/perl5/perlbrew/etc/bashrc
+perlbrew_bashrc="~/perl5/perlbrew/etc/bashrc"
+if [ -f $perlbrew_bashrc ]; then
+    source $perlbrew_bashrc
+fi
 
 # ls
 if [ "$TERM" != "dumb" ]; then
