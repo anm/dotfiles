@@ -62,7 +62,7 @@ PAGER=less; export PAGER
 LESS="-iR"; export LESS # case insesitive searching, raw colour contol chars
 MAIL=~/Maildir; export MAIL
 MAILDIR=~/Maildir; export MAILDIR
-EMAIL="alistair@biscuitsfruit.org.uk"; export EMAIL
+EMAIL="river@biscuitsfruit.org.uk"; export EMAIL
 PRINTER="Canon_MX7600_series"; export PRINTER
 
 # Load rvm (Ruby enVironment Manager)
