@@ -9,14 +9,15 @@
 (menu-bar-mode 0)
 (column-number-mode 1)
 (set-default 'fill-column 78)
+(setq-default show-trailing-whitespace t)
 
 ; for browsing / editing archives
 (auto-compression-mode 1)
 
 ;; Tabs
 (setq-default indent-tabs-mode nil) ; Use spaces for indentation
-(setq tab-width 4) ; Indentation width, whether using tabs or spaces
-(setq-default c-basic-offset 4) ; Indentation width used by c-mode derived modes
+(setq tab-width 2) ; Indentation width, whether using tabs or spaces
+(setq-default c-basic-offset 2) ; Indentation width used by c-mode derived modes
 
 ;; Keys
 (global-set-key "\C-w" 'backward-kill-word)
