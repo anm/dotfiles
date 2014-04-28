@@ -168,6 +168,9 @@ names which correspond to an existant file."
 
 (add-to-list 'load-path "~/.emacs.d/packages/cucumber.el")
 
+(add-to-list 'load-path "~/.emacs.d/packages/ruby-tools")
+(require 'ruby-tools)
+
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
 

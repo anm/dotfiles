@@ -13,3 +13,6 @@
 [submodule ".emacs.d/packages/cucumber.el"]
 	path = .emacs.d/packages/cucumber.el
 	url = https://github.com/michaelklishin/cucumber.el.git
+[submodule ".emacs.d/packages/ruby-tools"]
+	path = .emacs.d/packages/ruby-tools
+	url = https://github.com/rejeep/ruby-tools.el.git
