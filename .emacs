@@ -64,12 +64,13 @@
 
 (autoload 'thinks "thinks" nil t)
 
+(add-to-list 'load-path (concat package-path "/org/lisp"))
 (require 'org-install)
+
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-(setq org-agenda-files (list "~/Dropbox/bike/plan.org"))
 
 ;; mode-compile
 (autoload 'mode-compile "mode-compile"
@@ -214,18 +215,21 @@ names which correspond to an existant file."
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(haml-indent-offset 4)
  '(js2-cleanup-whitespace t)
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
- '(whitespace-style (quote (tabs spaces trailing lines space-before-tab indentation empty space-after-tab space-mark tab-mark))))
+ '(org-agenda-files (quote ("~/sailing/boat.org" "~/todo.org")))
+ '(whitespace-style
+   (quote
+    (tabs spaces trailing lines space-before-tab indentation empty space-after-tab space-mark tab-mark))))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  )
