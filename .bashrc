@@ -71,15 +71,6 @@ MAILDIR=~/Maildir; export MAILDIR
 EMAIL="river@biscuitsfruit.org.uk"; export EMAIL
 PRINTER="Canon_MX7600_series"; export PRINTER
 
-# Load rvm (Ruby enVironment Manager)
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Load perlbrew (like rvm for perl)
-perlbrew_bashrc="~/perl5/perlbrew/etc/bashrc"
-if [ -f $perlbrew_bashrc ]; then
-    source $perlbrew_bashrc
-fi
-
 # ls
 if [ "$TERM" != "dumb" ]; then
     if [ -n "$LINUX" ]; then
@@ -127,4 +118,16 @@ alias m="mpc"
 
 alias gg="links google.com"
 
+# Load nvm (Node version manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+# Load perlbrew (like rvm for perl)
+perlbrew_bashrc="~/perl5/perlbrew/etc/bashrc"
+if [ -f $perlbrew_bashrc ]; then
+    source $perlbrew_bashrc
+fi
+
+# Load rvm (Ruby enVironment Manager)
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
