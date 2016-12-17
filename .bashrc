@@ -56,8 +56,9 @@ export PERL_MM_USE_DEFALT=1
 
 CLASSPATH=".:$HOME/bin/java/*:$HOME/lib/java/*:/usr/share/java:/usr/share/java/*:/usr/lib/junit.jar:/usr/local/lib/libthrift.jar:/usr/share/java/slf4j/slf4j-api.jar:/usr/share/java/slf4j/slf4j-log4j12.jar:/usr/share/java/log4j.jar"; export CLASSPATH
 
-EDITOR="emacs -nw"; export EDITOR
-VISUAL="emacs -nw"; export VISUAL
+alias emacs="TERM=xterm emacs -nw"
+EDITOR="emacs"; export EDITOR
+VISUAL="emacs"; export VISUAL
 PAGER=less; export PAGER
 LESS="-iR"; export LESS # case insesitive searching, raw colour contol chars
 MAIL=~/Maildir; export MAIL
@@ -103,7 +104,6 @@ alias lal="ls -al"
 alias t="cd"
 
 alias locate="locate -i"
-alias emacs="emacs -nw"
 alias xterm="xterm -fg white -bg black &"
 alias clean="rm *.aux *.log *.dvi *.toc *.lof *.glo *.gls *.ist *.glg *.nav *.out *.snm *.bbl *.blg pan  pan.b  pan.c  pan.err  pan.h  pan_in  pan_in.trail  pan.m  pan.oin  pan.t  pan.tmp *~ \#*\#; clear; ls"
 alias c="clean"
