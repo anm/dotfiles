@@ -27,14 +27,14 @@ function exitstatus {
     BOLD="\[\033[1m\]"
     RED="\[\033[1;31m\]"
     OFF="\[\033[m\]"
-    
+
     if [ "$EXITSTATUS" -eq "0" ]
     then
         PS1="$EXITSTATUS\u@\h:\w$(__git_ps1 " (%s)")\$ "
     else
         PS1="${RED}$EXITSTATUS${OFF}\u@\h:\w${OFF}$(__git_ps1 " (%s)")${RED}\$${OFF} "
     fi
-    
+
     PS2="${BOLD}>${OFF} "
 }
 
@@ -45,7 +45,11 @@ PATH="/usr/bin:/usr/local/bin:/usr/lib/mutt:/opt/local/Library/Frameworks/Python
 
 export JBOSS_HOME="/Users/kung/jboss/jboss-6.0.0.Final"
 export MAVEN_OPTS="-Xmx1024m -Xms512m -XX:MaxPermSize=256m"
-export ANDROID_HOME="/home/anm/bin/adk/sdk"
+
+export ANDROID_HOME="$HOME/bin/adk/sdk"
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
 
 export PGDATA="/var/db/postgresql/defaultdb"
 export PGDATABASE="chronotyper"
