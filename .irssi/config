@@ -3,6 +3,13 @@ servers = (
     address = "irc.hackint.eu";
     chatnet = "hackint";
     autoconnect = "yes";
+    use_ssl = "yes";
+  },
+  {
+    address = "chat.freenode.net";
+    chatnet = "freenode";
+    autoconnect = "yes";
+    use_ssl = "yes";
   }
 );
 
@@ -62,7 +69,10 @@ chatnets = {
 };
 
 channels = (
-  { name = "#31c3-hall-6"; chatnet = "hackint"; autojoin = "Yes"; }
+  #  { name = "#34C3-hall-6"; chatnet = "hackint"; autojoin = "Yes"; }
+  #  { name = "#34C3-hall-g"; chatnet = "hackint"; autojoin = "Yes"; }
+  #  { name = "#34C3-everywhere"; chatnet = "hackint"; autojoin = "Yes"; }
+  #  { name = "#34C3"; chatnet = "hackint"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -234,11 +244,7 @@ statusbar = {
 };
 
 settings = {
-  core = {
-    real_name = "River";
-    user_name = "anm";
-    nick = "anm";
-  };
+  core = { user_name = "river"; nick = "river"; real_name = "river"; };
 
   "fe-common/core" = {
     autolog = "yes";
