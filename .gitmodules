@@ -16,3 +16,6 @@
 [submodule ".emacs.d/packages/ruby-tools"]
 	path = .emacs.d/packages/ruby-tools
 	url = https://github.com/rejeep/ruby-tools.el.git
+[submodule ".emacs.d/packages/nginx-mode"]
+	path = .emacs.d/packages/nginx-mode
+	url = git@github.com:ajc/nginx-mode.git

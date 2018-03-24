@@ -188,6 +188,11 @@ names which correspond to an existant file."
 (setq mail-header-separator "")
 (add-hook 'message-mode-hook 'auto-fill-mode)
 
+;;; nginx config files
+(add-to-list 'load-path (concat package-path "/nginx-mode"))
+(require 'nginx-mode)
+(add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
+(add-to-list 'auto-mode-alist '("river.cat.conf" . nginx-mode))
 
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Dropbox/bike/")
@@ -219,7 +224,9 @@ names which correspond to an existant file."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(nginx-indent-level 2)
  '(haml-indent-offset 4)
+ '(js-indent-level 2)
  '(js2-cleanup-whitespace t)
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
