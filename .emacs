@@ -224,13 +224,14 @@ names which correspond to an existant file."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(nginx-indent-level 2)
  '(haml-indent-offset 4)
  '(js-indent-level 2)
  '(js2-cleanup-whitespace t)
  '(js2-mirror-mode nil)
  '(js2-mode-escape-quotes nil)
+ '(nginx-indent-level 2)
  '(org-agenda-files (quote ("~/sailing/boat.org" "~/todo.org")))
+ '(vc-follow-symlinks t)
  '(whitespace-style
    (quote
     (tabs spaces trailing lines space-before-tab indentation empty space-after-tab space-mark tab-mark))))
