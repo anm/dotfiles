@@ -1,12 +1,12 @@
 [submodule ".emacs.d/packages/twittering-mode"]
 	path = .emacs.d/packages/twittering-mode
-	url = git://github.com/hayamiz/twittering-mode.git
+	url = https://github.com/hayamiz/twittering-mode.git
 [submodule ".emacs.d/packages/groovy"]
 	path = .emacs.d/packages/groovy
-	url = git://github.com/timvisher/emacs-groovy-mode-mirror.git
+	url = https://github.com/timvisher/emacs-groovy-mode-mirror.git
 [submodule ".emacs.d/packages/haml"]
 	path = .emacs.d/packages/haml
-	url = git://github.com/nex3/haml-mode.git
+	url = https://github.com/nex3/haml-mode.git
 [submodule ".emacs.d/packages/arduino-mode"]
 	path = .emacs.d/packages/arduino-mode
 	url = https://github.com/bookest/arduino-mode.git
@@ -18,4 +18,4 @@
 	url = https://github.com/rejeep/ruby-tools.el.git
 [submodule ".emacs.d/packages/nginx-mode"]
 	path = .emacs.d/packages/nginx-mode
-	url = git@github.com:ajc/nginx-mode.git
+	url = https://github.com/ajc/nginx-mode.git
