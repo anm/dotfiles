@@ -194,6 +194,12 @@ names which correspond to an existant file."
 (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
 (add-to-list 'auto-mode-alist '("river.cat.conf" . nginx-mode))
 
+;;; ledger
+
+(add-to-list 'load-path (concat package-path "/ledger-mode"))
+(require 'ledger-mode)
+(add-to-list 'auto-mode-alist '("\\.ledger\\'" . ledger-mode))
+
 ;; Set to the location of your Org files on your local system
 (setq org-directory "~/Dropbox/bike/")
 ;; Set to the name of the file where new notes will be stored

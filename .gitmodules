@@ -19,3 +19,6 @@
 [submodule ".emacs.d/packages/nginx-mode"]
 	path = .emacs.d/packages/nginx-mode
 	url = https://github.com/ajc/nginx-mode.git
+[submodule ".emacs.d/packages/ledger-mode"]
+	path = .emacs.d/packages/ledger-mode
+	url = https://github.com/ledger/ledger-mode.git
