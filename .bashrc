@@ -9,6 +9,18 @@ export LC_COLLATE="en_GB.UTF-8"
 # Make sure bash notices window resizing
 shopt -s checkwinsize
 
+# Make caps ctrl
+setxkbmap -option ctrl:nocaps
+
+# Context menu key is compose
+setxkbmap -option "compose:Menu" && xmodmap -e "keysym Menu = Multi_key"
+
+xinput set-prop 'TPPS/2 IBM TrackPoint' 'libinput Accel Profile Enabled' 0 1 # Make trackpoint a reasonable speed
+alias pa-monitor-on="pactl load-module module-loopback"
+alias pa-monitor-off="pactl unload-module module-loopback"
+alias monitor="pa-monitor-on"
+alias monitoroff="pa-monitor-off"
+
 LINUX=1
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
@@ -42,7 +54,7 @@ PROMPT_COMMAND=exitstatus
 
 PS1="$?\u@\h \w\$(git_branch)$ "; export PS1
 
-PATH="/usr/bin:/usr/local/bin:/usr/lib/mutt:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql90/bin:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:$HOME/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin:$HOME/bin/adk/sdk/tools:$HOME/bin/ansible/bin"; export PATH
+PATH="$HOME/.local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/lib/mutt:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/lib/postgresql90/bin:/opt/local/bin:/opt/local/sbin:/opt/opera/bin:/usr/local/bin:$HOME/bin:$PATH:/usr/games:/usr/bin:/usr/lib/perl5/core_perl/bin:$HOME/bin/adk/sdk/tools:$HOME/bin/ansible/bin:$HOME/.platformio/penv/bin:$HOME/bin/fomu-toolchain-linux_x86_64-v1.5.3/bin:$HOME/.cargo/bin"; export PATH
 
 export JBOSS_HOME="$HOME/jboss/jboss-6.0.0.Final"
 export MAVEN_OPTS="-Xmx1024m -Xms512m -XX:MaxPermSize=256m"
@@ -53,7 +65,8 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 
 export PGDATA="/var/db/postgresql/defaultdb"
-export PGDATABASE="chronotyper"
+export PGDATABASE="alleycat_development"
+export PGUSER="alleycat"
 alias postgres='sudo su postgres -c "postgres -D /var/db/postgresql/defaultdb/"'
 
 export PERL5LIB="/opt/local/lib/perl5/site_perl/5.12.3:$HOME/lib/perl5:$PERL5LIB"
@@ -69,7 +82,7 @@ LESS="-iR"; export LESS # case insesitive searching, raw colour contol chars
 MAIL=~/Maildir; export MAIL
 MAILDIR=~/Maildir; export MAILDIR
 EMAIL="river@biscuitsfruit.org.uk"; export EMAIL
-PRINTER="Canon_MX7600_series"; export PRINTER
+PRINTER="Hacklab_Color_Laserjet"; export PRINTER
 
 # ls
 if [ "$TERM" != "dumb" ]; then
@@ -118,9 +131,13 @@ alias m="mpc"
 
 alias gg="links google.com"
 
+alias equaliser="qpaeq"
+alias pa-equaliser="qpaeq"
+
 # Load nvm (Node version manager)
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Load perlbrew (like rvm for perl)
 perlbrew_bashrc="~/perl5/perlbrew/etc/bashrc"
@@ -128,6 +145,7 @@ if [ -f $perlbrew_bashrc ]; then
     source $perlbrew_bashrc
 fi
 
-# Load rvm (Ruby enVironment Manager)
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# Load rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
