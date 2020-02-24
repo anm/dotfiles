@@ -183,7 +183,6 @@ names which correspond to an existant file."
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . arduino-mode))
 
 ;;; Mail
-
 (add-to-list 'auto-mode-alist '(".*mutt.*" . message-mode))
 (setq mail-header-separator "")
 (add-hook 'message-mode-hook 'auto-fill-mode)
@@ -193,6 +192,11 @@ names which correspond to an existant file."
 (require 'nginx-mode)
 (add-to-list 'auto-mode-alist '("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode))
 (add-to-list 'auto-mode-alist '("river.cat.conf" . nginx-mode))
+
+;;; yaml
+(add-to-list 'load-path (concat package-path "/yaml-mode"))
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;;; ledger
 

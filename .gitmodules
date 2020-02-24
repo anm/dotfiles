@@ -22,3 +22,6 @@
 [submodule ".emacs.d/packages/ledger-mode"]
 	path = .emacs.d/packages/ledger-mode
 	url = https://github.com/ledger/ledger-mode.git
+[submodule ".emacs.d/packages/yaml-mode"]
+	path = .emacs.d/packages/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
